@@ -65,4 +65,4 @@ workflows:
   lint-test:
     jobs:
       - lint
-      # - coveralls
+      - coveralls
