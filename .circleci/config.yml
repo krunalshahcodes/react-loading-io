@@ -10,6 +10,32 @@ executors:
       - image: circleci/node:<< parameters.image >>
         environment:
           TERM: xterm
+aliases:
+  restore_cache: &restore_cache
+    restore_cache:
+      name: Restore Yarn Package Cache
+      keys:
+        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+
+  install_node_modules: &install_node_modules
+    run:
+      name: Install Yarn Packages
+      command: yarn install --frozen-lockfile
+
+  save_cache: &save_cache
+    save_cache:
+      name: Save Yarn Package Cache
+      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      paths:
+        - /home/circleci/.cache
+
+  store_results: &store_results
+    store_test_results:
+      path: results
+
+  store_results_artifacts: &store_results_artifacts
+    store_artifacts:
+      path: results
 
 jobs:
   lint:
