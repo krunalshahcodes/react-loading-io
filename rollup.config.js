@@ -18,7 +18,7 @@ const outputs = [
     format: 'esm'
   },
   {
-    name: 'ReactCssSpinners',
+    name: 'ReactLoadingIo',
     file: `${dist}/${bundle}.umd.js`,
     globals: {
       react: 'React'

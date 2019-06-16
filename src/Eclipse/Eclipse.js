@@ -3,7 +3,7 @@ import styles from './styles.css'
 
 const Eclipse = props => (
   <>
-    <style>${`${styles}`}</style>
+    <style>{styles.toString()}</style>
     <div className="lds-css ng-scope">
       <div className="lds-eclipse">
         <div></div>

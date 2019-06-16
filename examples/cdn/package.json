@@ -1,0 +1,15 @@
+{
+  "name": "cdn",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve"
+  },
+  "dependencies": {
+    "react-loading-io": "file:../.."
+  },
+  "devDependencies": {
+    "serve": "latest"
+  }
+}
