@@ -18,7 +18,9 @@
     "storybook": "start-storybook -c storybook",
     "prestorybook:build": "rm -rf storybook-static",
     "storybook:build": "build-storybook -c storybook",
-    "storybook:serve": "serve storybook-static"
+    "storybook:serve": "serve storybook-static",
+    "predeploy": "npm run storybook:build",
+    "deploy": "gh-pages -d storybook-static"
   },
   "husky": {
     "hooks": {
@@ -43,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/imkrunal/react-loading-io"
   },
-  "homepage": "https://github.com/imkrunal/react-loading-io#readme",
+  "homepage": "https://imkrunal.github.io/react-loading-io",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
@@ -61,6 +63,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.0.1",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "lint-staged": "^8.2.1",

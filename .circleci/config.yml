@@ -53,7 +53,9 @@ jobs:
   coveralls:
     executor: node
     steps:
+      - <<: *restore_cache
       - <<: *install_node_modules
+      - <<: *save_cache
       - run:
           name: Build Coverage
           command: yarn run test:coveralls
@@ -63,4 +65,4 @@ workflows:
   lint-test:
     jobs:
       - lint
-      - coveralls
+      # - coveralls
