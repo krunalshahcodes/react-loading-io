@@ -60,11 +60,9 @@ jobs:
           name: Build Coverage
           command: npm run test:coveralls
 
-
 workflows:
   version: 2
-    lint-test:
-      jobs:
-        - lint
-        - coveralls
-
+  lint-test:
+    jobs:
+      - lint
+      - coveralls
