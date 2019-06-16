@@ -86,5 +86,8 @@
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/mocks/styles.js"
     }
+  },
+  "dependencies": {
+    "coveralls": "^3.0.4"
   }
 }

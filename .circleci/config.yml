@@ -1,0 +1,44 @@
+version: 2.1
+
+executors:
+  node:
+    parameters:
+      image:
+        type: string
+        default: "10"
+    docker:
+      - image: circleci/node:<< parameters.image >>
+        environment:
+          TERM: xterm
+
+jobs:
+  lint:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - run:
+          name: Run ESLint
+          command: yarn run lint
+      - <<: *store_results
+      - <<: *store_results_artifacts
+  coveralls:
+    executor: node
+    steps:
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - run:
+          name: Build Coverage
+          command: npm run test:coveralls
+
+
+workflows:
+  version: 2
+    lint-test:
+      jobs:
+        - lint
+        - coveralls
+
