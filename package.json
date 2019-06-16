@@ -1,0 +1,21 @@
+{
+  "name": "react-loading-io",
+  "version": "1.0.0",
+  "description": "CSS-only spinners of loading.io for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:imkrunal/react-loading-io.git",
+  "keywords": [
+    "react",
+    "css",
+    "spinners"
+  ],
+  "author": "Krunal Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imkrunal/react-loading-io"
+  },
+  "homepage": "https://github.com/imkrunal/react-loading-io#readme"
+}
