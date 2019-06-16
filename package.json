@@ -2,7 +2,9 @@
   "name": "react-loading-io",
   "version": "1.0.0",
   "description": "CSS-only spinners of loading.io for React",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
@@ -51,6 +53,14 @@
     "rollup": "^1.15.6",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^5.0.3",
-    "rollup-plugin-terser": "^5.0.0"
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-terser": "^5.0.0",
+    "serve": "^11.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
