@@ -4,7 +4,8 @@
   "description": "CSS-only spinners of loading.io for React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "prettier-eslint '**/*.js' --write"
   },
   "repository": "git@github.com:imkrunal/react-loading-io.git",
   "keywords": [
@@ -17,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/imkrunal/react-loading-io"
   },
-  "homepage": "https://github.com/imkrunal/react-loading-io#readme"
+  "homepage": "https://github.com/imkrunal/react-loading-io#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1"
+  }
 }
