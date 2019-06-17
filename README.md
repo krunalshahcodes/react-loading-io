@@ -35,8 +35,35 @@
 
 <p align="center">CSS-only spinners of loading.io for React</p>
 
-| Component                                                                               | Optional Parameters                     |
+# Installation
+
+Using npm:
+
+```shell
+npm install react-loading-io --save
+```
+
+Using yarn:
+
+```shell
+yarn add react-loading-io
+```
+
+# Usage
+
+```javascript
+// Import Package
+import { Eclipse } from "react-loading-io";
+
+// Use Component
+const Index = () => {
+  return <Eclipse size={64} />;
+};
+```
+
+| Components                                                                              | Optional Parameters                     |
 | --------------------------------------------------------------------------------------- | --------------------------------------- |
 | [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse)   | size, sizeUnit, color, speed, thickness |
 | [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling)   | size, sizeUnit, color, speed, thickness |
 | [DualRing](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--dualring) | size, sizeUnit, color, speed, thickness |
+| [Ball](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--ball)         | size, sizeUnit, color, speed            |
