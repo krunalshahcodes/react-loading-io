@@ -4,3 +4,4 @@ dist
 storybook-static
 coverage
 .coveralls.yml
+yarn-error.log

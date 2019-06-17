@@ -3,7 +3,7 @@ import { Eclipse } from 'react-loading-io'
 
 class App extends Component {
   render () {
-    return <Eclipse />
+    return <Eclipse size={200} color="red" thickness={2} speed={1} />
   }
 }
 

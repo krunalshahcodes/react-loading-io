@@ -1,18 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
-  <style>
-    [object Object]
-  </style>,
+<div>
   <div
-    className="lds-css ng-scope"
+    className="css-fs8tfg-Eclipse"
   >
     <div
-      className="lds-eclipse"
-    >
-      <div />
-    </div>
-  </div>,
-]
+      className="css-1na2h22-Eclipse"
+    />
+  </div>
+</div>
 `;

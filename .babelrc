@@ -10,11 +10,16 @@
         }
       }
     ],
-    "@babel/react"
+    "@babel/react",
+    "@emotion/babel-preset-css-prop"
   ],
   "env": {
     "test": {
-      "presets": ["@babel/env", "@babel/react"]
+      "presets": [
+        "@babel/env",
+        "@babel/react",
+        "@emotion/babel-preset-css-prop"
+      ]
     }
   }
 }
