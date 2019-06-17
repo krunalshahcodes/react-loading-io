@@ -1,8 +1,11 @@
 import React from 'react'
+import serializer from 'jest-emotion'
 import renderer from 'react-test-renderer'
 import { Eclipse } from '..'
 
-it('renders correctly', () => {
+expect.addSnapshotSerializer(serializer)
+
+it('eclipse renders correctly', () => {
   const tree = renderer.create(<Eclipse />).toJSON()
   expect(tree).toMatchSnapshot()
 })

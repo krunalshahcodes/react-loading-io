@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css, keyframes } from '@emotion/core'
+import { convertToPx } from '../helpers'
 
 const rolling = keyframes`
   0% {
@@ -10,10 +11,6 @@ const rolling = keyframes`
     transform: translate(-50%, -50%) rotate(360deg);
   }
 `
-const convertToPx = size => {
-  const px = size * 16
-  return px
-}
 
 class Rolling extends React.Component {
   render () {

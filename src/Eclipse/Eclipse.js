@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css, keyframes } from '@emotion/core'
+import { convertToPx } from '../helpers'
 
 const eclipse = keyframes`
   0% {
@@ -13,10 +14,6 @@ const eclipse = keyframes`
     transform: rotate(360deg);
   }
 `
-const convertToPx = size => {
-  const px = size * 16
-  return px
-}
 
 class Eclipse extends React.Component {
   render () {

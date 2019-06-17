@@ -65,5 +65,11 @@ workflows:
   version: 2
   lint-test:
     jobs:
-      - lint
-      - coveralls
+      - lint:
+          filters:
+            branches:
+              only: develop
+      - coveralls:
+          filters:
+            branches:
+              only: develop
