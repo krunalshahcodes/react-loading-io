@@ -7,17 +7,36 @@
       alt="CircleCI"
     />
   </a>
-  <!-- <a href='https://coveralls.io/github/imkrunal/react-loading-io?branch=master'>
+  <a href='https://coveralls.io/github/imkrunal/react-loading-io?branch=master'>
     <img
       src='https://coveralls.io/repos/github/imkrunal/react-loading-io/badge.svg?branch=master'
       alt='Coverage Status'
     />
-  </a> -->
+  </a>
+  <a href='https://www.npmjs.com/package/react-loading-io'>
+    <img
+      src='https://img.shields.io/npm/dt/react-loading-io.svg'
+      alt='Downloads'
+    />
+  </a>
+  <a href='https://www.npmjs.com/package/react-loading-io'>
+    <img
+      src='https://img.shields.io/bundlephobia/minzip/react-loading-io.svg'
+      alt='Bundle Size'
+    />
+  </a>
+  <a href='https://github.com/imkrunal/react-loading-io/blob/master/LICENSE'>
+    <img
+      src='https://img.shields.io/github/license/imkrunal/react-loading-io.svg'
+      alt='Licence'
+    />
+  </a>
 </p>
 
 <p align="center">CSS-only spinners of loading.io for React</p>
 
-| Component                                                                             | Optional Parameters                     |
-| ------------------------------------------------------------------------------------- | --------------------------------------- |
-| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse) | size, sizeUnit, color, speed, thickness |
-| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling) | size, sizeUnit, color, speed, thickness |
+| Component                                                                               | Optional Parameters                     |
+| --------------------------------------------------------------------------------------- | --------------------------------------- |
+| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse)   | size, sizeUnit, color, speed, thickness |
+| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling)   | size, sizeUnit, color, speed, thickness |
+| [DualRing](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--dualring) | size, sizeUnit, color, speed, thickness |

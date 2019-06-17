@@ -5,3 +5,4 @@ storybook-static
 coverage
 .coveralls.yml
 yarn-error.log
+.DS_Store
