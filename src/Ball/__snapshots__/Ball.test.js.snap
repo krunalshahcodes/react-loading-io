@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ball renders correctly 1`] = `
+@keyframes animation-0 {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.45,0,0.9,0.55);
+    animation-timing-function: cubic-bezier(0.45,0,0.9,0.55);
+  }
+
+  0% {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  50% {
+    -webkit-transform: translate(0,108px);
+    -ms-transform: translate(0,108px);
+    transform: translate(0,108px);
+    -webkit-animation-timing-function: cubic-bezier(0,0.45,0.55,0.9);
+    animation-timing-function: cubic-bezier(0,0.45,0.55,0.9);
+  }
+
+  100% {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-1 {
+  position: relative;
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate( -200px,-200px ) scale(1) translate( 200px,200px );
+  -ms-transform: translate( -200px,-200px ) scale(1) translate( 200px,200px );
+  transform: translate( -200px,-200px ) scale(1) translate( 200px,200px );
+}
+
+.emotion-0 {
+  position: absolute;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  width: 52px;
+  height: 52px;
+  top: 20px;
+  left: 74px;
+  border-radius: 50%;
+  background: #f08d43;
+}
+
+<div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-0"
+    />
+  </div>
+</div>
+`;

@@ -3,18 +3,25 @@ import PropTypes from 'prop-types'
 import { css, keyframes } from '@emotion/core'
 import { convertToPx } from '../helpers'
 
-const dualring = keyframes`
+const ball = keyframes`
+   0%, 100% {
+    animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.55);
+  }
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 108px);
+    animation-timing-function: cubic-bezier(0, 0.45, 0.55, 0.9);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(0, 0);
   }
 `
 
-class DualRing extends React.Component {
+class Ball extends React.Component {
   render () {
-    const { size, sizeUnit, thickness, color, speed } = this.props
+    const { size, sizeUnit, color, speed } = this.props
     let scale
     if (sizeUnit === 'em' || sizeUnit === 'rem') {
       scale = convertToPx(size) / 200
@@ -22,7 +29,6 @@ class DualRing extends React.Component {
       scale = size / 200
     }
     const translate = size * scale
-    const border = thickness * 2
 
     return (
       <div>
@@ -45,14 +51,13 @@ class DualRing extends React.Component {
           <div
             css={css`
               position: absolute;
-              animation: ${dualring} ${speed}s linear infinite;
-              width: 160px;
-              height: 160px;
+              animation: ${ball} ${speed}s linear infinite;
+              width: 52px;
+              height: 52px;
               top: 20px;
-              left: 20px;
+              left: 74px;
               border-radius: 50%;
-              border: ${border}px solid ${color};
-              border-color: ${color} transparent ${color} transparent;
+              background: ${color};
             `}
           ></div>
         </div>
@@ -61,7 +66,7 @@ class DualRing extends React.Component {
   }
 }
 
-DualRing.propTypes = {
+Ball.propTypes = {
   size: PropTypes.number,
   sizeUnit: PropTypes.string,
   color: PropTypes.string,
@@ -69,7 +74,7 @@ DualRing.propTypes = {
   speed: PropTypes.number
 }
 
-DualRing.defaultProps = {
+Ball.defaultProps = {
   size: 200,
   sizeUnit: 'px',
   color: '#f08d43',
@@ -77,4 +82,4 @@ DualRing.defaultProps = {
   speed: 1
 }
 
-export default DualRing
+export default Ball
