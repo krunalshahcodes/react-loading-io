@@ -7,12 +7,17 @@
       alt="CircleCI"
     />
   </a>
-  <a href='https://coveralls.io/github/imkrunal/react-loading-io?branch=master'>
+  <!-- <a href='https://coveralls.io/github/imkrunal/react-loading-io?branch=master'>
     <img
       src='https://coveralls.io/repos/github/imkrunal/react-loading-io/badge.svg?branch=master'
       alt='Coverage Status'
     />
-  </a>
+  </a> -->
 </p>
 
 <p align="center">CSS-only spinners of loading.io for React</p>
+
+| Component                                                                             | Optional Parameters                     |
+| ------------------------------------------------------------------------------------- | --------------------------------------- |
+| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse) | size, sizeUnit, color, speed, thickness |
+| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling) | size, sizeUnit, color, speed, thickness |
