@@ -59,7 +59,7 @@ class Ball extends React.Component {
               border-radius: 50%;
               background: ${color};
             `}
-          ></div>
+          />
         </div>
       </div>
     )
