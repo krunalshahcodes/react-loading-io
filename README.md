@@ -61,9 +61,9 @@ const Index = () => {
 };
 ```
 
-| Components                                                                              | Optional Parameters                     |
-| --------------------------------------------------------------------------------------- | --------------------------------------- |
-| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse)   | size, sizeUnit, color, speed, thickness |
-| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling)   | size, sizeUnit, color, speed, thickness |
-| [DualRing](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--dualring) | size, sizeUnit, color, speed, thickness |
-| [Ball](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--ball)         | size, sizeUnit, color, speed            |
+| Loader                                                                                  | size:int | thickness:int | speed:int | color: str |
+| --------------------------------------------------------------------------------------- | -------- | ------------- | --------- | ---------- |
+| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse)   | 200      | 2             | 1         | #f08d43    |
+| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling)   | 200      | 20            | 1         | #f08d43    |
+| [DualRing](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--dualring) | 200      | 4             | 1         | #f08d43    |
+| [Ball](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--ball)         | 200      | 4             | 1         | #f08d43    |
