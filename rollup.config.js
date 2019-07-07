@@ -29,9 +29,14 @@ const outputs = [
 
 const common = {
   input: 'src/index.js',
-  external: ['react', 'prop-types'],
+  external: ['react', 'prop-types', '@emotion/core'],
   plugins: [
     resolve(),
+    // commonjs({
+    //   namedExports: {
+    //     'react-js': ['isValidElementType']
+    //   }
+    // }),
     babel({
       exclude: 'node_modules/**'
     }),
