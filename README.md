@@ -53,13 +53,27 @@ yarn add react-loading-io
 
 ```javascript
 // Import Package
-import { Eclipse } from "react-loading-io";
+import { Eclipse } from 'react-loading-io';
 
 // Use Component
 const Index = () => {
   return <Eclipse size={64} />;
 };
 ```
+
+# Spinners
+
+- [x] Spinner
+- [x] Eclipse
+- [x] Rolling
+- [x] Dual Ring
+- [x] Ball
+- [] Ripple
+- [] Reload
+- [] Gear
+- [] Facebook
+- [] Cube
+- [] Blocks
 
 | Loader                                                                                  | size:int | thickness:int | speed:int | color: str |
 | --------------------------------------------------------------------------------------- | -------- | ------------- | --------- | ---------- |
