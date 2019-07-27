@@ -1,6 +1,6 @@
 {
   "name": "react-loading-io",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CSS-only spinners of loading.io for React",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -53,6 +53,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.14",
     "@storybook/react": "^5.1.8",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
@@ -96,7 +97,6 @@
     }
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.9",
     "@emotion/core": "^10.0.10",
     "prop-types": "^15.7.2"
   }
