@@ -68,12 +68,12 @@ const Index = () => {
 - [x] Rolling
 - [x] Dual Ring
 - [x] Ball
-- [] Ripple
-- [] Reload
-- [] Gear
-- [] Facebook
-- [] Cube
-- [] Blocks
+- [ ] Ripple
+- [ ] Reload
+- [ ] Gear
+- [ ] Facebook
+- [ ] Cube
+- [ ] Blocks
 
 | Loader                                                                                  | size:int | thickness:int | speed:int | color: str |
 | --------------------------------------------------------------------------------------- | -------- | ------------- | --------- | ---------- |
