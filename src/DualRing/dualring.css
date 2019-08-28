@@ -1,0 +1,82 @@
+@keyframes rl-dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rl-dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rl-dual-ring {
+  position: relative;
+  display: inline-block;
+  width: var(--rl-dual-ring-size) !important;
+  height: var(--rl-dual-ring-size) !important;
+  -webkit-transform: translate(
+      calc(var(--rl-dual-ring-translate) * -1),
+      calc(var(--rl-dual-ring-translate) * -1)
+    )
+    scale(var(--rl-dual-ring-scale))
+    translate(var(--rl-dual-ring-translate), var(--rl-dual-ring-translate));
+  transform: translate(
+      calc(var(--rl-dual-ring-translate) * -1),
+      calc(var(--rl-dual-ring-translate) * -1)
+    )
+    scale(var(--rl-dual-ring-scale))
+    translate(var(--rl-dual-ring-translate), var(--rl-dual-ring-translate));
+}
+.rl-dual-ring div {
+  box-sizing: border-box;
+}
+.rl-dual-ring > div {
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  border: var(--rl-dual-ring-border) solid #000;
+  border-color: var(--rl-dual-ring-color) transparent var(--rl-dual-ring-color)
+    transparent;
+  -webkit-animation: rl-dual-ring var(--rl-dual-ring-speed) linear infinite;
+  animation: rl-dual-ring var(--rl-dual-ring-speed) linear infinite;
+}
+.rl-dual-ring > div:nth-child(2) {
+  border-color: transparent;
+}
+.rl-dual-ring > div:nth-child(2) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.rl-dual-ring > div:nth-child(2) div:before,
+.rl-dual-ring > div:nth-child(2) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 72px;
+  background: var(--rl-dual-ring-color);
+  border-radius: 50%;
+  box-shadow: 0 160px 0 0 var(--rl-dual-ring-color);
+}
+.rl-dual-ring > div:nth-child(2) div:after {
+  left: -8px;
+  top: 72px;
+  box-shadow: 160px 0 0 0 var(--rl-dual-ring-color);
+}
