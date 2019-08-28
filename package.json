@@ -1,6 +1,6 @@
 {
   "name": "react-loading-io",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "CSS-only spinners of loading.io for React",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "commit": "git-cz",
-    "prebuild": "rimraf dist",
-    "build": "rollup -c",
+    "prebuild": "rm -rf dist",
+    "build": "run-p compile:* bundle",
     "compile": "babel src --extensions '.ts,.tsx' --ignore '**/*.test.tsx' --ignore '**/*.story.tsx'",
     "compile:cjs": "npm run compile -- --out-dir dist",
     "compile:esm": "BABEL_ENV=esm npm run compile -- --out-dir dist/esm",
@@ -123,10 +123,5 @@
   },
   "engines": {
     "node": ">=8"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.css$": "<rootDir>/mocks/styles.js"
-    }
   }
 }
