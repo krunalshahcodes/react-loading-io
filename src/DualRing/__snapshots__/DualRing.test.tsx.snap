@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-dual-ring"
+  style={
+    Object {
+      "--rl-dual-ring-border": "8px",
+      "--rl-dual-ring-color": "#ED4585",
+      "--rl-dual-ring-scale": 1,
+      "--rl-dual-ring-size": "200px",
+      "--rl-dual-ring-speed": "1s",
+      "--rl-dual-ring-translate": "200px",
+    }
+  }
+>
+  <div />
+</div>
+`;

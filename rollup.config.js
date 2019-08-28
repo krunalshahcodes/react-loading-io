@@ -1,53 +1,70 @@
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
-import { string } from 'rollup-plugin-string'
+import postcss from 'rollup-plugin-postcss'
 
-const dist = 'dist'
-const bundle = 'bundle'
+const input = 'src/index.ts'
 
-const production = !process.env.ROLLUP_WATCH
-
-const outputs = [
-  {
-    file: `${dist}/${bundle}.cjs.js`,
-    format: 'cjs'
-  },
-  {
-    file: `${dist}/${bundle}.esm.js`,
-    format: 'esm'
-  },
-  {
-    name: 'ReactLoadingIo',
-    file: `${dist}/${bundle}.umd.js`,
-    globals: {
-      react: 'React'
-    },
-    format: 'umd'
-  }
-]
-
-const common = {
-  input: 'src/index.js',
-  external: ['react', 'prop-types', '@emotion/core'],
-  plugins: [
-    resolve(),
-    // commonjs({
-    //   namedExports: {
-    //     'react-js': ['isValidElementType']
-    //   }
-    // }),
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    string({
-      include: '**/*.css'
-    }),
-    production && terser()
-  ]
+const globals = {
+  react: 'React',
+  'prop-types': 'PropTypes'
 }
 
-export default outputs.map(output => ({
-  ...common,
-  output
-}))
+const external = Object.keys(globals)
+
+const extensions = ['.ts', '.tsx']
+
+const output = {
+  globals,
+  name: 'ReactLoadingIo',
+  format: 'umd'
+}
+
+const babelOptions = {
+  extensions,
+  babelrc: false, // to ignore @babel/transform-runtime
+  exclude: 'node_modules/**',
+  presets: ['@babel/typescript', '@babel/env', '@babel/react']
+}
+
+export default [
+  {
+    input,
+    external,
+    output: {
+      ...output,
+      file: 'dist/bundle.js'
+    },
+    plugins: [
+      resolve({
+        extensions
+      }),
+      babel(babelOptions),
+      postcss({
+        extract: 'dist/style.css'
+      })
+    ]
+  },
+  {
+    input,
+    external,
+    output: {
+      ...output,
+      file: 'dist/bundle.min.js'
+    },
+    plugins: [
+      resolve({
+        extensions
+      }),
+      babel({
+        ...babelOptions,
+        plugins: ['transform-react-remove-prop-types']
+      }),
+      postcss({
+        extract: 'dist/style.min.css',
+        minimize: true
+      }),
+      terser()
+    ]
+  }
+]

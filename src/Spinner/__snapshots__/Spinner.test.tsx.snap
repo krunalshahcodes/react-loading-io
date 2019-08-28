@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-spinner"
+  style={
+    Object {
+      "--rl-spinner-color": "#ED4585",
+      "--rl-spinner-scale": 1,
+      "--rl-spinner-size": "200px",
+      "--rl-spinner-speed": "1s",
+      "--rl-spinner-translate": "200px",
+    }
+  }
+>
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+</div>
+`;

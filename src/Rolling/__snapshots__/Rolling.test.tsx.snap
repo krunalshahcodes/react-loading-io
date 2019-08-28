@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-rolling"
+  style={
+    Object {
+      "--rl-rolling-border": "20px",
+      "--rl-rolling-color": "#ED4585",
+      "--rl-rolling-scale": 1,
+      "--rl-rolling-size": "200px",
+      "--rl-rolling-speed": "1s",
+      "--rl-rolling-translate": "200px",
+    }
+  }
+>
+  <div />
+</div>
+`;

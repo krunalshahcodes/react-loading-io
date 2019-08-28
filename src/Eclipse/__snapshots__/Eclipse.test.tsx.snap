@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-eclipse"
+  style={
+    Object {
+      "--rl-eclipse-color": "#ED4585",
+      "--rl-eclipse-scale": 1,
+      "--rl-eclipse-size": "200px",
+      "--rl-eclipse-speed": "1s",
+      "--rl-eclipse-thickness": "4px",
+      "--rl-eclipse-translate": "200px",
+    }
+  }
+>
+  <div />
+</div>
+`;

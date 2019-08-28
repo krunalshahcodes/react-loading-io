@@ -1,0 +1,57 @@
+@keyframes rl-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes rl-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.rl-rolling {
+  position: relative;
+  display: inline-block;
+  width: var(--rl-rolling-size) !important;
+  height: var(--rl-rolling-size) !important;
+  -webkit-transform: translate(
+      calc(var(--rl-rolling-translate) * -1),
+      calc(var(--rl-rolling-translate) * -1)
+    )
+    scale(var(--rl-rolling-scale))
+    translate(var(--rl-rolling-translate), var(--rl-rolling-translate));
+  transform: translate(
+      calc(var(--rl-rolling-translate) * -1),
+      calc(var(--rl-rolling-translate) * -1)
+    )
+    scale(var(--rl-rolling-scale))
+    translate(var(--rl-rolling-translate), var(--rl-rolling-translate));
+}
+.rl-rolling div,
+.rl-rolling div:after {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: var(--rl-rolling-border) solid var(--rl-rolling-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+.rl-rolling div {
+  -webkit-animation: rl-rolling var(--rl-rolling-speed) linear infinite;
+  animation: rl-rolling var(--rl-rolling-speed) linear infinite;
+  top: 100px;
+  left: 100px;
+}
+.rl-rolling div:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

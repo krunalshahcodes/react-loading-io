@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-ball"
+  style={
+    Object {
+      "--rl-ball-color": "#ED4585",
+      "--rl-ball-scale": 1,
+      "--rl-ball-size": "200px",
+      "--rl-ball-speed": "1s",
+      "--rl-ball-translate": "200px",
+    }
+  }
+>
+  <div />
+</div>
+`;
