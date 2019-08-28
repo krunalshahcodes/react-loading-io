@@ -1,24 +1,35 @@
 {
   "presets": [
+    "@babel/typescript",
     [
       "@babel/env",
       {
-        "modules": false,
-        "targets": {
-          "browsers": "> 0.25%, ie 11, not op_mini all, not dead",
-          "node": 8
-        }
+        "targets": "node 8"
       }
     ],
-    "@babel/react",
-    "@emotion/babel-preset-css-prop"
+    "@babel/react"
+  ],
+  "plugins": [
+    "@babel/transform-runtime",
+    [
+      "transform-react-remove-prop-types",
+      {
+        "mode": "unsafe-wrap",
+        "ignoreFilenames": ["node_modules"]
+      }
+    ]
   ],
   "env": {
-    "test": {
+    "esm": {
       "presets": [
-        "@babel/env",
-        "@babel/react",
-        "@emotion/babel-preset-css-prop"
+        "@babel/typescript",
+        [
+          "@babel/env",
+          {
+            "modules": false
+          }
+        ],
+        "@babel/react"
       ]
     }
   }

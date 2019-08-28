@@ -2,17 +2,30 @@
   "name": "react-loading-io",
   "version": "1.0.5",
   "description": "CSS-only spinners of loading.io for React",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
-  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "unpkg": "dist/bundle.min.js",
+  "types": "src/index.ts",
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist"
   ],
   "scripts": {
+    "commit": "git-cz",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "lint": "eslint '**/*.js'",
-    "lint:fix": "prettier-eslint '**/*.js' --write",
+    "compile": "babel src --extensions '.ts,.tsx' --ignore '**/*.test.tsx' --ignore '**/*.story.tsx'",
+    "compile:cjs": "npm run compile -- --out-dir dist",
+    "compile:esm": "BABEL_ENV=esm npm run compile -- --out-dir dist/esm",
+    "bundle": "rollup -c",
+    "postbuild": "run-p copy:*",
+    "copy": "rsync -zarvm --include='*/' --include='*.css' --exclude='*' src/",
+    "copy:cjs": "npm run copy dist",
+    "copy:esm": "npm run copy dist/esm",
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -23,7 +36,8 @@
     "storybook:build": "build-storybook -c storybook",
     "storybook:serve": "serve storybook-static",
     "predeploy": "npm run storybook:build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
@@ -36,6 +50,11 @@
       "npm run test:staged",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "repository": "https://github.com/imkrunal/react-loading-io.git",
   "keywords": [
@@ -50,43 +69,57 @@
   },
   "homepage": "https://imkrunal.github.io/react-loading-io",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@emotion/babel-preset-css-prop": "^10.0.14",
-    "@storybook/react": "^5.1.8",
-    "babel-core": "^7.0.0-bridge.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/react": "^5.1.10",
+    "@types/jest": "^24.0.16",
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-test-renderer": "^16.8.3",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__react": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
-    "coveralls": "^3.0.4",
-    "eslint": "^6.0.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "commitizen": "^4.0.3",
+    "coveralls": "^3.0.5",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.14.1",
     "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
-    "gh-pages": "^2.0.1",
-    "husky": "^3.0.0",
+    "gh-pages": "^2.1.0",
+    "husky": "^3.0.2",
     "jest": "^24.8.0",
-    "jest-emotion": "^10.0.11",
-    "lint-staged": "^9.2.0",
-    "prettier-eslint": "^9.0.0",
-    "prettier-eslint-cli": "^5.0.0",
+    "lint-staged": "^9.2.1",
+    "npm-run-all": "^4.1.5",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "rimraf": "^3.0.0",
-    "rollup": "^1.15.6",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^5.0.3",
-    "rollup-plugin-string": "^3.0.0",
-    "rollup-plugin-terser": "^5.0.0",
-    "serve": "^11.0.1"
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^5.1.1",
+    "serve": "^11.1.0",
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
-    "react": ">=15"
+    "@babel/runtime": ">=7.5",
+    "prop-types": ">=15",
+    "react": ">=16.2"
   },
   "engines": {
     "node": ">=8"
@@ -95,9 +128,5 @@
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/mocks/styles.js"
     }
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "prop-types": "^15.7.2"
   }
 }
