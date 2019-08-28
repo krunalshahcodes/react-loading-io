@@ -7,3 +7,5 @@ export * from './Eclipse'
 export * from './Rolling'
 
 export * from './Spinner'
+
+export * from './Spin'

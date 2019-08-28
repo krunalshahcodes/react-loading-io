@@ -10,7 +10,8 @@ import { withKnobs } from '@storybook/addon-knobs'
 
 addParameters({
   options: {
-    brandUrl: 'https://imkrunal.github.io/react-loading-io/'
+    brandUrl: 'https://imkrunal.github.io/react-loading-io/',
+    showPanel: true
   }
 })
 

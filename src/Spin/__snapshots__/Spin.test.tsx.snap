@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rl-spin"
+  style={
+    Object {
+      "--rl-spin-border": "40px",
+      "--rl-spin-color": "#ED4585",
+      "--rl-spin-scale": 1,
+      "--rl-spin-size": "200px",
+      "--rl-spin-speed": "1s",
+      "--rl-spin-translate": "200px",
+    }
+  }
+>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+  <div>
+    <div />
+  </div>
+</div>
+`;

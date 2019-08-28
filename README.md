@@ -53,7 +53,7 @@ yarn add react-loading-io
 
 ```javascript
 // Import Package
-import { Eclipse } from 'react-loading-io';
+import { Eclipse } from "react-loading-io";
 
 // Use Component
 const Index = () => {
@@ -68,16 +68,10 @@ const Index = () => {
 - [x] Rolling
 - [x] Dual Ring
 - [x] Ball
+- [x] Spin
 - [ ] Ripple
 - [ ] Reload
 - [ ] Gear
 - [ ] Facebook
 - [ ] Cube
 - [ ] Blocks
-
-| Loader                                                                                  | size:int | thickness:int | speed:int | color: str |
-| --------------------------------------------------------------------------------------- | -------- | ------------- | --------- | ---------- |
-| [Eclipse](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--eclipse)   | 200      | 2             | 1         | #f08d43    |
-| [Rolling](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--rolling)   | 200      | 20            | 1         | #f08d43    |
-| [DualRing](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--dualring) | 200      | 4             | 1         | #f08d43    |
-| [Ball](https://imkrunal.github.io/react-loading-io/?path=/story/spinners--ball)         | 200      | 4             | 1         | #f08d43    |
