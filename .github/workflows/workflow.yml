@@ -31,8 +31,5 @@ jobs:
       uses: coverallsapp/github-action@v1.0.1
       with:
         github-token: ${{ secrets.github_token }}
-      run: |
-        yarn install
-        yarn run test:coveralls
       
     
