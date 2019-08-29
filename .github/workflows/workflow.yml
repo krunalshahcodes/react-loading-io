@@ -31,7 +31,4 @@ jobs:
       run: |
         yarn install
         yarn run test:coveralls
-        
-    env:
-        CI: true
     
