@@ -1,6 +1,6 @@
 {
   "name": "react-loading-io",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "CSS-only spinners of loading.io for React",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",

@@ -35,6 +35,10 @@
 
 <p align="center">CSS-only spinners of loading.io for React</p>
 
+# Demo
+
+[Demo Page](https://imkrunal.github.io/react-loading-io/)
+
 # Installation
 
 Using npm:
@@ -69,6 +73,7 @@ const Index = () => {
 - [x] Dual Ring
 - [x] Ball
 - [x] Spin
+- [x] Magnify
 - [ ] Ripple
 - [ ] Reload
 - [ ] Gear
