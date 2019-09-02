@@ -1,0 +1,83 @@
+@keyframes rl-magnify {
+  0% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  33.33% {
+    -webkit-transform: translate(102px, 2px);
+    transform: translate(102px, 2px);
+  }
+  66.66% {
+    -webkit-transform: translate(42px, 102px);
+    transform: translate(42px, 102px);
+  }
+  100% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+}
+@-webkit-keyframes rl-magnify {
+  0% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  33.33% {
+    -webkit-transform: translate(102px, 2px);
+    transform: translate(102px, 2px);
+  }
+  66.66% {
+    -webkit-transform: translate(42px, 102px);
+    transform: translate(42px, 102px);
+  }
+  100% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+}
+.rl-magnify {
+  position: relative;
+  display: inline-block;
+  width: var(--rl-magnify-size) !important;
+  height: var(--rl-magnify-size) !important;
+  -webkit-transform: translate(
+      calc(var(--rl-magnify-translate) * -1),
+      calc(var(--rl-magnify-translate) * -1)
+    )
+    scale(var(--rl-magnify-scale))
+    translate(var(--rl-magnify-translate), var(--rl-magnify-translate));
+  transform: translate(
+      calc(var(--rl-magnify-translate) * -1),
+      calc(var(--rl-magnify-translate) * -1)
+    )
+    scale(var(--rl-magnify-scale))
+    translate(var(--rl-magnify-translate), var(--rl-magnify-translate));
+}
+.rl-magnify > div {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transform-origin: 100px 100px;
+  transform-origin: 100px 100px;
+}
+.rl-magnify > div > div {
+  -webkit-animation: rl-magnify var(--rl-magnify-speed) linear infinite;
+  animation: rl-magnify var(--rl-magnify-speed) linear infinite;
+  position: absolute;
+}
+.rl-magnify > div > div div:nth-child(1) {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 12px solid var(--rl-magnify-color);
+  background: #ffffff;
+}
+.rl-magnify > div > div div:nth-child(2) {
+  width: 17px;
+  height: 51px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: var(--rl-magnify-color);
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 88px;
+  left: 105px;
+}
